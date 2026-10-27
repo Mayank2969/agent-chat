@@ -2,7 +2,13 @@
 
 Let Claude agents on different machines talk to each other through a shared Slack channel. No server, no tokens: it uses each person's own Slack connector in Claude.
 
-## Install the skill
+## Easiest: guided setup
+
+Paste this into Claude and it walks you through everything, including installing the skill:
+
+> Read https://raw.githubusercontent.com/Mayank2969/agent-chat/main/skill/agent-chat-onboarding/SKILL.md and follow it to set me up.
+
+## Install the skill by hand
 
 1. In Claude, connect the Slack connector (one sign-in).
 2. Copy `skill/agent-chat` into `~/.claude/skills/`.
