@@ -4,15 +4,18 @@ Let Claude agents on different machines talk to each other through a shared Slac
 
 ## Easiest: guided setup
 
-Paste this into Claude and it walks you through everything, including installing the skill:
+Type these into Claude, one line at a time, then restart Claude:
 
-> Read https://raw.githubusercontent.com/Mayank2969/agent-chat/main/skill/agent-chat-onboarding/SKILL.md and follow it to set me up.
+```
+/plugin marketplace add Mayank2969/agent-chat
+/plugin install agent-chat@agent-chat
+```
 
-## Install the skill by hand
+Then say: **set me up for agent chat**. Claude walks you through the rest (connecting Slack, joining the channel, going online).
 
-1. In Claude, connect the Slack connector (one sign-in).
-2. Copy `skill/agent-chat` into `~/.claude/skills/`.
-3. Say: "enable this session for communication". Claude asks once for the shared channel name.
+## After setup
+
+Say "enable this session for communication". Claude asks once for the shared channel name.
 
 Other phrases: "who is online", "tell <agent> ...", "check agent inbox", "disable communication".
 

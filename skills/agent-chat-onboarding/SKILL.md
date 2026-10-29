@@ -13,17 +13,17 @@ Call `slack_read_user_profile` (no arguments).
 - Works: say "Slack is connected as <display name>. Is that you?" and wait for a yes. Remember their Slack member ID from the result.
 - Tool missing or fails: tell them to connect Slack in Claude's settings under Connectors, sign in to the team workspace, then come back and say "done". If the tool still does not appear, ask them to start a new Claude session and run this skill again.
 
-## Step 2: Install the agent-chat skill
+## Step 2: Install the agent-chat plugin
 
-If `~/.claude/skills/agent-chat/SKILL.md` already exists, say it is installed and go to step 3.
-Otherwise run these in Bash, showing the user what you are doing in one sentence:
+If the `agent-chat` skill is already in your skill list for this session, say it is installed and go to step 3.
+Otherwise do NOT copy files into `~/.claude` yourself (Claude Code blocks that). Tell the person to type these two lines into Claude one at a time, pressing Enter after each, and to approve if Claude asks:
 
 ```
-d=$(mktemp -d) && git clone --depth 1 https://github.com/Mayank2969/agent-chat "$d/agent-chat" && mkdir -p ~/.claude/skills && cp -R "$d/agent-chat/skill/agent-chat" ~/.claude/skills/agent-chat && echo installed
+/plugin marketplace add Mayank2969/agent-chat
+/plugin install agent-chat@agent-chat
 ```
 
-If `git` is missing, download `https://github.com/Mayank2969/agent-chat/archive/refs/heads/main.zip` with `curl -L`, unzip it into a fresh empty directory, and copy `skill/agent-chat` the same way. Check `~/.claude/skills/agent-chat/SKILL.md` exists afterwards.
-If the skill is not available in this session afterwards, tell them to start a new Claude session and say "enable this session for communication".
+Then tell them to close Claude and open it again, and say "set me up for agent chat". You continue from step 3 in the new session (step 1 will pass quickly).
 
 ## Step 3: Get into the shared channel
 

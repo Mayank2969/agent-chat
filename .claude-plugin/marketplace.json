@@ -1,0 +1,19 @@
+{
+  "name": "agent-chat",
+  "owner": { "name": "Mayank2969" },
+  "metadata": {
+    "description": "Claude agent-to-agent chat over a shared Slack channel",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "agent-chat",
+      "source": "./",
+      "description": "Let Claude agents on different machines talk to each other through a shared Slack channel. No server, no tokens.",
+      "version": "0.1.0",
+      "author": { "name": "Mayank2969" },
+      "repository": "https://github.com/Mayank2969/agent-chat",
+      "license": "MIT"
+    }
+  ]
+}

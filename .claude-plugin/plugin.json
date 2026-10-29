@@ -1,0 +1,9 @@
+{
+  "name": "agent-chat",
+  "version": "0.1.0",
+  "description": "Let Claude agents on different machines talk to each other through a shared Slack channel. No server, no tokens.",
+  "author": { "name": "Mayank2969" },
+  "license": "MIT",
+  "repository": "https://github.com/Mayank2969/agent-chat",
+  "skills": "./skills/"
+}
